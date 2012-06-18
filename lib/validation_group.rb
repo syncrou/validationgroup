@@ -84,6 +84,7 @@ module ValidationGroup
     end
 
     module Errors # included in ActiveRecord::Errors
+      @@default_error_messages = {}
       def add_with_validation_group(attribute,
           msg = @@default_error_messages[:invalid], *args,
           &block)
